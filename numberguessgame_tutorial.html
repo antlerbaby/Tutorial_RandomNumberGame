@@ -43,7 +43,8 @@
     <div class="form">
       <label for="guessField">
           Enter a guess: 
-      </label><input type="text" id="guessField" class="guessField">
+      </label>
+      <input type="text" id="guessField" class="guessField">
       <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
 
@@ -56,10 +57,25 @@
 
 
     <script>
+      // Typing in the JavaScript from the Tutorial (not copy-pasting)
 
+      // variables and constants:
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
 
+      const guesses = document.querySelector('.guesses');
+      const lastResult = document.querySelector('.lastResult');
+      const lowOrHi = document.querySelector('.lowOrHi');
 
-      // Your JavaScript goes here
+      const guessSubmit = document.querySelector('guessSubmit');
+      const guessField = document.querySelector('guessField');
+
+      let guessCount = 1;
+      let resetButton;
+
+      // Functions
+      function checkGuess() {
+        alert('I am a placeholder');
+      }
 
 
 
