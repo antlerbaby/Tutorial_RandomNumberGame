@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Number Guessing Game</title>
 
     <style>
@@ -84,6 +82,7 @@
           setGameOver();
         } else if (guessCount === 10) {
           lastResult.textContent = '!!!GAME OVER!!!';
+          lowOrHi.textContent = '';
           setGameOver();
         } else {
           lastResult.textContent = 'Wrong!';
@@ -116,7 +115,7 @@
         guessCount = 1;
 
         const resetParas = document.querySelectorAll('.resultParas p');
-        for (let i=0 ; i<resetParas.length ; i++) {
+        for(let i=0 ; i < resetParas.length ; i++) {
           resetParas[i].textContent = '';
         }
 
@@ -126,15 +125,10 @@
         guessSubmit.disabled = false;
         guessField.value = '';
         guessField.focus();
-
         lastResult.style.backgroundColor = 'white';
-        
         randomNumber = Math.floor(Math.random() * 100) + 1;
       }
   
-
-
     </script>
-
   </body>
 </html>
